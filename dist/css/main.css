@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  display: grid;
+  color: #ce9797;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logo-section" "hero-img" "context-wrap";
+  overflow: hidden;
+}
+
+.logo-section {
+  outline: 1px solid green;
+  grid-area: logo-section;
+  align-self: center;
+}
+
+.logo-section img {
+  outline: 1px solid red;
+  width: 26%;
+  margin-left: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero-img {
+  outline: 1px solid red;
+  grid-area: hero-img;
+  background-image: url("/images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-wrap {
+  outline: 1px solid blue;
+  grid-area: context-wrap;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 4rem 2.5rem;
+  margin: 0 auto;
+}
+
+.content-wrap .content-title {
+  text-transform: uppercase;
+  max-width: 70%;
+  letter-spacing: 10px;
+  outline: 1px solid red;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-wrap .content-title span {
+  outline: green solid 1px;
+  color: #413a3a;
+  font-weight: 900;
+}
+
+.content-wrap p {
+  font-size: 0.825rem;
+  font-weight: 400;
+  max-width: 34ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.form-wrap {
+  width: 100%;
+  position: relative;
+}
+
+form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+form .email {
+  font-size: 0.825rem;
+  color: #ce9797;
+  border: 1px solid lightgray;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+form ::placeholder {
+  color: #ce9797;
+  opacity: 0.8;
+}
+
+form button {
+  position: absolute;
+  background-color: #ce9797;
+  z-index: 3;
+  right: 0;
+  top: 0;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
+  box-shadow: 10px 11px 32px 8px rgba(206, 151, 151, 0.4);
+}
+
+form button:hover {
+  transform: scale(0.98);
+  opacity: 0.8;
+}

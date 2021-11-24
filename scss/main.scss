@@ -105,25 +105,26 @@ body {
 
 // form buttons
 
-.active {
-   display: block;
-}
-
-.hide {
-   display: none;
-}
-
-.form-wrap {
-   // outline: 1px solid green;
-   // background-color: green;
-   width: 100%;
-   position: relative;
-}
-
 form {
    width: 100%;
    margin-top: 1rem;
    // outline: 1px solid red;
+
+   .form-control {
+      // outline: 1px solid green;
+      // background-color: green;
+      width: 100%;
+      position: relative;
+
+      i {
+         visibility: hidden;
+         // visibility: visible;
+         position: absolute;
+         top: 10px;
+         right: 65px;
+         width: 20px;
+      }
+   }
 
    .email {
       font-size: $fs-sm;
@@ -132,11 +133,25 @@ form {
       border-radius: 30px;
       padding: 10px 20px;
       width: 100%;
+
+      &:focus {
+         border-color: rgb(174, 163, 163);
+         outline: 0;
+      }
    }
 
    ::placeholder {
       color: $light-red;
+      opacity: 0.5;
+   }
+
+   small {
+      color: $soft-red;
+      position: absolute;
+      bottom: -25px;
+      left: 21px;
       opacity: 0.8;
+      visibility: hidden;
    }
 
    button {
@@ -153,6 +168,48 @@ form {
       &:hover {
          transform: scale(0.98);
          opacity: 0.8;
+      }
+   }
+}
+
+// .form-control.success input {
+//    border-color: #2ab865;
+// }
+
+// .form-control.error input {
+//    border-color: #e74c3c;
+// }
+
+// .form-control.error i {
+//    color: #e74c3c;
+//    visibility: visible;
+// }
+
+// .form-control.error small {
+//    visibility: visible;
+// }
+
+.form-control {
+   &.success {
+      input {
+         border-color: #2ab865;
+      }
+   }
+}
+
+.form-control {
+   &.error {
+      input {
+         border-color: #e74c3c;
+      }
+
+      i {
+         color: #e74c3c;
+         visibility: visible;
+      }
+
+      small {
+         visibility: visible;
       }
    }
 }

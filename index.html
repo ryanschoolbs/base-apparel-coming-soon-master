@@ -12,6 +12,7 @@
       />
 
       <link rel="stylesheet" href="./dist/css/main.css" />
+      <script src="/app.js" defer></script>
 
       <title>Frontend Mentor | Base Apparel coming soon page</title>
    </head>
@@ -41,16 +42,18 @@
             </div> -->
 
             <form>
-               <div class="form-wrap">
+               <div class="form-control">
                   <input
                      type="email"
                      class="email"
                      id="email"
                      placeholder="Email Address"
+                     required
                   />
+                  <i><img src="./images/icon-error.svg" /></i>
+                  <small>Error Messages</small>
                   <button type="submit" class="btn">
-                     <img src="./images/icon-arrow.svg" alt="" class="active" />
-                     <img src="./images/icon-error.svg" alt="" class="hide" />
+                     <img src="./images/icon-arrow.svg" />
                   </button>
                </div>
             </form>

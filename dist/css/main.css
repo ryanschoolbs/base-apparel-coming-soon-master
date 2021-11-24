@@ -153,22 +153,22 @@ body {
   margin-right: auto;
 }
 
-.active {
-  display: block;
+form {
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.hide {
-  display: none;
-}
-
-.form-wrap {
+form .form-control {
   width: 100%;
   position: relative;
 }
 
-form {
-  width: 100%;
-  margin-top: 1rem;
+form .form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  right: 65px;
+  width: 20px;
 }
 
 form .email {
@@ -180,9 +180,23 @@ form .email {
   width: 100%;
 }
 
+form .email:focus {
+  border-color: #aea3a3;
+  outline: 0;
+}
+
 form ::placeholder {
   color: #ce9797;
+  opacity: 0.5;
+}
+
+form small {
+  color: #f96262;
+  position: absolute;
+  bottom: -25px;
+  left: 21px;
   opacity: 0.8;
+  visibility: hidden;
 }
 
 form button {
@@ -200,4 +214,21 @@ form button {
 form button:hover {
   transform: scale(0.98);
   opacity: 0.8;
+}
+
+.form-control.success input {
+  border-color: #2ab865;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error i {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
 }

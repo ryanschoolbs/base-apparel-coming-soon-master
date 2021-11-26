@@ -97,21 +97,16 @@ body {
 }
 
 .logo-section {
-  outline: 1px solid green;
   grid-area: logo-section;
   align-self: center;
 }
 
 .logo-section img {
-  outline: 1px solid red;
   width: 26%;
   margin-left: 2rem;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .hero-img {
-  outline: 1px solid red;
   grid-area: hero-img;
   background-image: url("/images/hero-mobile.jpg");
   background-repeat: no-repeat;
@@ -120,7 +115,6 @@ body {
 }
 
 .content-wrap {
-  outline: 1px solid blue;
   grid-area: context-wrap;
   display: flex;
   flex-direction: column;
@@ -132,7 +126,6 @@ body {
 .content-wrap .content-title {
   text-transform: uppercase;
   letter-spacing: 10px;
-  outline: 1px solid red;
   font-weight: 300;
   line-height: 1.1;
   margin-left: auto;
@@ -140,7 +133,6 @@ body {
 }
 
 .content-wrap .content-title span {
-  outline: green solid 1px;
   color: #413a3a;
   font-weight: 900;
 }
@@ -269,5 +261,86 @@ form button:hover {
   }
   .content-wrap p {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  .container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 58% auto;
+    grid-template-rows: 1fr 5fr;
+    gap: 0px 0px;
+    grid-template-areas: "logo-section hero-img" "context-wrap hero-img";
+  }
+  .logo-section {
+    grid-area: logo-section;
+  }
+  .hero-img {
+    grid-area: hero-img;
+    background-image: url("/images/hero-desktop.jpg");
+  }
+  .context-wrap {
+    grid-area: context-wrap;
+  }
+  .logo-section {
+    width: 100%;
+    height: 100%;
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo-section img {
+    margin: 0;
+    width: 35%;
+    max-width: 200px;
+  }
+  .content-wrap {
+    padding: 4rem 10rem;
+    row-gap: 2.5rem;
+  }
+  .content-wrap .content-title {
+    text-align: left;
+    margin-left: 0;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+  }
+  .content-wrap p {
+    margin-left: 0;
+    text-align: left;
+    font-size: 1.125rem;
+    max-width: 90%;
+    max-width: 500px;
+  }
+  form {
+    margin-top: 0;
+  }
+  form .form-control {
+    margin-left: 0;
+    max-width: 90%;
+    max-width: 500px;
+  }
+  form .form-control input {
+    padding: 15px 30px;
+  }
+  form .form-control .email {
+    font-size: 1rem;
+  }
+  form .form-control i {
+    top: 15px;
+    right: 90px;
+    width: 30px;
+  }
+  form .form-control button {
+    padding: 18px 35px;
+  }
+  form .form-control small {
+    bottom: -35px;
   }
 }

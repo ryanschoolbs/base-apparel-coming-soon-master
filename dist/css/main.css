@@ -116,6 +116,7 @@ body {
   background-image: url("/images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 100%;
 }
 
 .content-wrap {
@@ -130,7 +131,6 @@ body {
 
 .content-wrap .content-title {
   text-transform: uppercase;
-  max-width: 70%;
   letter-spacing: 10px;
   outline: 1px solid red;
   font-weight: 300;
@@ -145,12 +145,24 @@ body {
   font-weight: 900;
 }
 
+@media (min-width: 500px) {
+  .content-wrap .content-title {
+    max-width: 70%;
+  }
+}
+
 .content-wrap p {
   font-size: 0.825rem;
   font-weight: 400;
   max-width: 34ch;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 500px) {
+  .content-wrap p {
+    font-size: 1rem;
+  }
 }
 
 form {
@@ -160,6 +172,9 @@ form {
 
 form .form-control {
   width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
 
@@ -231,4 +246,28 @@ form button:hover {
 
 .form-control.error small {
   visibility: visible;
+}
+
+@media (min-width: 440px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 24px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 4.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  .logo-section img {
+    margin-left: 4rem;
+  }
+  .content-wrap p {
+    font-size: 18px;
+  }
 }

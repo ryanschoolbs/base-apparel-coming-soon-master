@@ -161,26 +161,10 @@ form {
       &:hover {
          transform: scale(0.98);
          opacity: 0.8;
+         cursor: pointer;
       }
    }
 }
-
-// .form-control.success input {
-//    border-color: #2ab865;
-// }
-
-// .form-control.error input {
-//    border-color: #e74c3c;
-// }
-
-// .form-control.error i {
-//    color: #e74c3c;
-//    visibility: visible;
-// }
-
-// .form-control.error small {
-//    visibility: visible;
-// }
 
 // email valid control
 
